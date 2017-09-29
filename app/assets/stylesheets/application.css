@@ -62,3 +62,30 @@
   font-weight: bold;
   letter-spacing: 0.15em;
 }
+
+/*search*/
+.search {
+  margin-bottom: 20px;
+}
+
+/*デフォルトだとひどいレイアウトくずれがおきているがこれは，画像のサイズが巨大すぎるため*/
+/*item*/
+.item .panel-body {
+  height: 70px;
+}
+.item .panel-heading{
+  height: 250px;
+}
+.item .panel-heading img{
+  height: 100%;
+  max-width: 100%;
+}
+p.item-title {
+  /*文の行数を2行に保ち,最後に...を追加するスタイル*/
+  /*webkit-line-clampを使うためにbox化した*/
+  /*webkit-lin-clampはフレキシブルボックスのオプション*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
