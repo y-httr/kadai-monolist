@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   
   def show
     @user =User.find(params[:id])
+    #.uniqは１つの商品にWant,Haveしていた場合の重複を防ぐため
+    @items = @user.items.uniq
+    @count_want = @user.want_items.count
   end
 
   def create
