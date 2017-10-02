@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     #.uniqは１つの商品にWant,Haveしていた場合の重複を防ぐため
     @items = @user.items.uniq
     @count_want = @user.want_items.count
+    @count_have = @user.have_items.count
   end
 
   def create
