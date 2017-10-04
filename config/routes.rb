@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   #haveもwantも動作は同じなので，ownershipsコントローラでまとめる
   resources :ownerships, only:[:create, :destroy]
   
+  get 'rankings/want', to: 'rankings#want'
+  
 end
